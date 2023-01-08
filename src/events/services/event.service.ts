@@ -11,4 +11,16 @@ export class EventService {
         private eventRepository: Repository<Event>
     ) {}
 
+    createEvent( userId : string , body : EventDto) : Promise<Event> {
+        console.log("------------------- userId,body --------------------------")
+        console.log(userId,body)
+        const newEvent = this.eventRepository.create({
+            userId,
+            ...body
+          });
+        console.log("------------------- newEvent --------------------------")
+        console.log(newEvent)
+        return this.eventRepository.save(newEvent);
+    }
+
 }
