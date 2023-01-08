@@ -3,22 +3,22 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Event {
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     id: string; //au format uuidv4
     
-    @Column()
+    @Column('date')
     date: Date;
     
     @Column({ default: 'Pending' })
-    eventStatus: string;
+    eventStatus: 'Pending' | 'Accepted' | 'Declined';
     
     @Column()
-    eventType: string;
+    eventType: 'RemoteWork' | 'PaidLeave';
     
-    @Column()
+    @Column('text')
     eventDescription: string;
     
-    @Column()
+    @Column('uuid')
     userId: string; //au format uuidv4
     
 }

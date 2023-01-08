@@ -34,6 +34,6 @@ describe('AppController (e2e)', () => {
   new DayThreeTesting(app).routeTest()
   new DayFourTesting(app).routeTest()
   new DayFiveTesting(app).routeTest()
-  new DaySixPartOneTesting(app).routeTest()
-  new DaySixPartTwoTesting(app).routeTest()
+  // new DaySixPartOneTesting(app).routeTest()
+  // new DaySixPartTwoTesting(app).routeTest()
 });

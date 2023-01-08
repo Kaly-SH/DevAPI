@@ -1,21 +1,21 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class ProjectUser {
+export class ProjectUsers {
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     id: string; //au format uuidv4
     
-    @Column()
+    @Column('date')
     startDate: Date;
     
-    @Column()
+    @Column('date')
     endDate: Date;
     
-    @Column()
+    @Column('uuid')
     projectId: string; //au format uuidv4
     
-    @Column()
+    @Column('uuid')
     userId: string; //au format uuidv4
     
 }
